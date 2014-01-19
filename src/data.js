@@ -157,7 +157,7 @@ jQuery.fn.extend({
 				// *... In the case of properties that might _actually_
 				// have dashes, we need to also store a copy of that
 				// unchanged property.
-				if ( key.indexOf("-") !== -1 && data !== undefined ) {
+				if ( ~key.indexOf("-") && data !== undefined ) {
 					data_user.set( this, key, value );
 				}
 			});
